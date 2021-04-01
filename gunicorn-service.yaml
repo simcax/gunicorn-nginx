@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: gunicorn
 spec:
+  type: NodePort
   ports:
     - protocol: TCP
       port: 30002
