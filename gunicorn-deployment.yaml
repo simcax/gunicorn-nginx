@@ -10,7 +10,11 @@ spec:
   selector:
     matchLabels:
       app: gunicorn
-      labels: test
+      miljo: test
+  template:
+    labels:
+      app: gunicorn
+      miljo: test
     spec:
       containers: 
       - name: gunicorn
