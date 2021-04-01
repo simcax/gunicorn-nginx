@@ -12,9 +12,10 @@ spec:
       app: gunicorn
       miljo: test
   template:
-    labels:
-      app: gunicorn
-      miljo: test
+    metadata:
+      labels:
+        app: gunicorn
+        miljo: test
     spec:
       containers: 
       - name: gunicorn
