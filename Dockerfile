@@ -1,5 +1,6 @@
 FROM python:alpine
-RUN apk add py3-gunicorn nginx python3 bash
+RUN apk update
+RUN apk add py3-gunicorn python3 bash
 COPY requirements.txt /
 RUN python3 -m pip install -r /requirements.txt
 COPY app /app
