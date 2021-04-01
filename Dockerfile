@@ -10,5 +10,5 @@ WORKDIR /
 EXPOSE 8000
 ENTRYPOINT ["./docker_entrypoint.sh"]
 
-CMD ["gunicorn", "--bind","0.0.0.0:8000", "app.app:app"]
+CMD ["gunicorn", "-c", "python:config.gunicorn", "app.app:app"]
 
