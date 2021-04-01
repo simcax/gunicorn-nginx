@@ -21,5 +21,5 @@ spec:
       - name: gunicorn
         image: localhost:32000/gunicorn
         ports:
-        - containerPort: 30000
+        - containerPort: 8000
       
