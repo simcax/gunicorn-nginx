@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: gunicorn-deployment
+  labels: 
+    app: gunicorn
+    miljo: test
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: gunicorn
+      labels: test
+    spec:
+      containers: 
+      - name: gunicorn
+        image: gunicorn
+        ports:
+        - containerPort: 30000
+      
